@@ -1,0 +1,58 @@
+.image-slider-container {
+    padding: 16px;
+  }
+  
+  /* Swiper slide container */
+  .swiper-slide {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+  }
+  
+  /* Ensure images fit perfectly and are responsive */
+  .swiper-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  /* Black overlay effect on hover */
+  .swiper-slide::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0); /* Initially transparent */
+    transition: background 0.3s ease-in-out;
+  }
+  
+  /* Apply black overlay when hovering */
+  .swiper-slide:hover::before {
+    background: rgba(28, 28, 28, 0.7); /* Black with some transparency */
+  }
+  
+  
+  /* Sample text overlay */
+  .swiper-slide .image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 2;
+  }
+  
+  /* Show text on hover */
+  .swiper-slide:hover .image-text {
+    opacity: 1;
+  }
+  
