@@ -94,8 +94,8 @@ const AboutUs = () => {
     <h2 className="text-2xl font-semibold mb-2">Contact Us</h2>
     <p className="text-base leading-relaxed">Have a project in mind? Let’s create something amazing together.</p>
     <div className="mt-4 space-y-2">
-      <p><strong>Email:</strong> <a className="text-blue-600 underline" href="mailto:designparkindia@gmail.com">designparkindia@gmail.com</a></p>
-      <p><strong>Phone:</strong> +91 98765 43210</p>
+      <p><strong>Email:</strong> <a className="text-blue-600 underline" href="mailto:designparkindia@gmail.com">dk255767@gmail.com</a></p>
+      <p><strong>Phone:</strong> +91 7502218281</p>
     </div>
   </section>
 </div>
