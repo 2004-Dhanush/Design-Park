@@ -37,7 +37,7 @@ const ContactUs = () => {
       <Navbar />
       <div className="container-fluid py-5" style={{ background: 'linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%)' }}>
         <div className="text-center mb-5">
-          <h1 className="fw-bold" style={{ fontSize: '3rem', color: '#2c3e50' }}>Contact Us</h1>
+          <h1 className="fw-bold mt-5" style={{ fontSize: '3rem', color: '#2c3e50' }}>Contact Us</h1>
           <p className="text-muted">We’re here to help and answer any question you might have.</p>
         </div>
 
