@@ -1,12 +1,30 @@
-import React from "react";
-import p from "./new.png"; // Replace with a creative design image
+import React, { useEffect, useState } from "react";
+import desktopImg from "./new.png";
+import mobileImg from "../UI/images/pmob.png"; // Replace with your mobile version image
 
 const HeroSection = () => {
+  const [bgImage, setBgImage] = useState(desktopImg);
+
+  useEffect(() => {
+    const updateImage = () => {
+      if (window.innerWidth <= 768) {
+        setBgImage(mobileImg);
+      } else {
+        setBgImage(desktopImg);
+      }
+    };
+
+    updateImage(); // Set on initial load
+    window.addEventListener("resize", updateImage);
+
+    return () => window.removeEventListener("resize", updateImage);
+  }, []);
+
   return (
     <div style={{ position: "relative", textAlign: "center", color: "white", margin: "0px" }}>
       {/* Background Image */}
       <img
-        src={p}
+        src={bgImage}
         alt="Design Park Background"
         style={{ width: "100%", height: "100vh", objectFit: "cover" }}
       />
@@ -34,13 +52,7 @@ const HeroSection = () => {
           width: "85%",
         }}
       >
-        {/* <h1 className="hero-title">PORTFOLIO</h1>
-        <br />
-        <h4 className="hero-description">
-        Step into my creative world where imagination meets purposeful design.
-Each project is a blend of storytelling, innovation, and impact.
-Explore visuals crafted to inspire, communicate, and connect..
-        </h4> */}
+        {/* Add any text content if needed */}
       </div>
 
       {/* Styling */}
