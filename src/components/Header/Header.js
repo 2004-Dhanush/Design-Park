@@ -83,7 +83,8 @@ const NavbarWithCarousel = () => {
           </h2>
           <ul style={{ display: "flex", gap: "32px", fontSize: "14px", fontWeight: "500" }}>
             <li><a href="/">HOME</a></li>
-            <li><a href="/products">POSTER</a></li>
+            <li><a href="/Portfolio">PORTFOLIO</a></li>
+            <li><a href="/poster">POSTER</a></li>
             <li><a href="/aboutus">ABOUT US</a></li>
             <li><a href="/contactus">CONTACT US</a></li>
           </ul>
@@ -136,7 +137,8 @@ const NavbarWithCarousel = () => {
             style={{ position: "absolute", top: "20px", right: "20px", cursor: "pointer" }}
             onClick={() => setMobileMenuOpen(false)}
           />
-          {["HOME", "POSTER", "ABOUT US", "CONTACT US"].map((text, idx) => (
+         {["HOME", "PORTFOLIO", "POSTER", "ABOUT US", "CONTACT US"].map((text, idx) => (
+
             <a
               key={idx}
               href={`/${text.toLowerCase().replace(" ", "")}`}

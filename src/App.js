@@ -7,7 +7,7 @@ import Aboutus from "./pages/AboutUs/AboutUs";
 import Contactus  from "./pages/ContactUs/ContactUs";
 import Termsandconditions  from "./pages/TermsAndConditions/TermsAndConditions";
 import PrivacyPolicy  from "./pages/PrivacyPolicy/PrivacyPolicy";
-
+import Portfolio from "./pages/UI/Portfolio"
 import NoPage from "./pages/NoPage/NoPage";
 
 const App = () => {
@@ -15,7 +15,9 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/products" element={<Products />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/poster" element={<Products />} />
+        <Route path="/Portfolio" element={<Portfolio />} />
         <Route path="/aboutus" element={<Aboutus />} />
         <Route path="/contactus" element={<Contactus />} />
         <Route path="/terms-and-conditions" element={<Termsandconditions />} />

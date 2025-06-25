@@ -24,7 +24,9 @@ const Slider = () => {
 
   return (
     <div className="review-slider-container">
-      <h1>Customer review</h1>
+     <h1 class="text-center text-decoration-underline">Customer review</h1>
+
+
       <div className="review-slides mt-4">
         {reviews.map((review, index) => (
           <div key={index} className={`review-slide ${index === currentIndex ? "active" : ""}`}>

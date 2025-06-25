@@ -81,7 +81,8 @@ function Home() {
           <Navbar />
           <Slideshow />
           <Container className="pt-1 mb-4">
-            <h1 className="text-center mt-4 mb-4">Services</h1>
+          <h1 className="text-center mt-4 mb-4 underline">Services</h1>
+
             <Row className="g-3 justify-content-center">
               {services.map((service, index) => (
                 <Col key={index} xs={6} md={2} className="d-flex justify-content-center">
@@ -101,8 +102,8 @@ function Home() {
             </Row>
           </Container>
           <div className='home-porfolio pt-2 pb-4' id='portfolio1'>
-            <h2 className='text-light text-center pt-4'>POSTER THAT WE MADE</h2>
-            <p className='text-light text-center'>All Type of Poster We </p>
+            <h2 className='text-light text-center pt-4 '>POSTER THAT WE MADE</h2>
+            <p className='text-light text-center'>Sample and Type of Poster </p>
             <ImageSlider />
           </div>
           <div className='home-aboutus pb-5 pt-5' id='about'>
@@ -116,7 +117,7 @@ function Home() {
           </div>
           <div className='offer' id='offer'>
             <Container className="offers-section">
-              <h1 className="text-center mb-4">Freelancing</h1>
+              <h1 className="text-center mb-4 underline">Freelancing</h1>
               <Row className="g-4 pt-4">
                 <Col xs={12} sm={6} md={4} className="offer-col">
                   <div className="offer-card">
@@ -222,7 +223,7 @@ function Home() {
             <Container className="mt-4 text-secondary">
               <Row>
                 <Col>
-                  <p style={{ fontSize: '28px', fontWeight: '500' ,marginBottom:'20px'}} className='text-center'>
+                  <p style={{ fontSize: '28px', fontWeight: '500' ,marginBottom:'20px', color: 'black'}} className='text-center'>
                     Bringing your creative vision to life — just a click away at Design Park
                   </p>
                   <p>
@@ -240,8 +241,8 @@ function Home() {
 
               <Row className="mt-3">
                 <Col>
-                  <p style={{ fontSize: '24px', fontWeight: '400' }}>
-                    What makes Design Park the perfect choice for your creative needs
+                  <p style={{ fontSize: '24px', fontWeight: '400' ,color: 'black'}}>
+                    What makes Design Park the perfect choice for your creative needs?
                   </p>
                   <ul>
                     <li>Easy online access to professional design services.</li>
@@ -258,7 +259,7 @@ function Home() {
 
               <Row className="mt-3">
                 <Col>
-                  <p style={{ fontSize: '24px', fontWeight: '400' }}>
+                  <p style={{ fontSize: '24px', fontWeight: '400' ,color: 'black'}}>
                     How does Design Park deliver unique designs at such reasonable prices?
                   </p>
                   <p>
@@ -274,7 +275,7 @@ function Home() {
 
               <Row className="mt-3">
                 <Col>
-                  <p style={{ fontSize: '24px', fontWeight: '400' }}>
+                  <p style={{ fontSize: '24px', fontWeight: '400' ,color: 'black'}}>
                     Customer Service
                   </p>
                   <p className="mb-3">

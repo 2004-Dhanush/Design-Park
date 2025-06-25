@@ -20,10 +20,10 @@ const ContactUs = () => {
     e.preventDefault();
 
     emailjs.sendForm(
-      'service_abc123', // Your Service ID
-      'template_xgi0b0o', // Your Template ID
+      'service_dvrnmeh',         // ✅ Your Service ID
+      'template_460hh1q',        // ✅ Your Template ID
       e.target,
-      '6CU0oBrwwF0GUw2pJ' // Your Public Key
+      'BCyLhns2S1aDEduuc'        // ✅ Your Public Key
     )
       .then(() => {
         alert("Message sent successfully!");
@@ -94,6 +94,9 @@ const ContactUs = () => {
                   <label htmlFor="floatingMessage">Message</label>
                 </div>
 
+                {/* ⏰ Hidden field to capture the date and time */}
+                <input type="hidden" name="time" value={new Date().toLocaleString()} />
+
                 <div className="d-grid">
                   <button type="submit" className="btn btn-primary py-2 fw-semibold">
                     📩 Send Message
@@ -106,26 +109,25 @@ const ContactUs = () => {
 
         <div className="text-center mt-5">
           <h4 className="fw-bold">Contact Info</h4>
-          <p><strong>Email:</strong> <a href="mailto:dk255767@gmail.com">dk255767@gmail.com</a></p>
+          <p><strong>Email:</strong> <a href="mailto:designparkinfo@gmail.com">designparkinfo@gmail.com</a></p>
           <p><strong>Phone:</strong> +91 7502218281</p>
           <p><strong>Address:</strong> Kalai Annai Nagar, Sevagoundanur, Bhavani, Erode dt - 638455</p>
         </div>
 
         <div className="text-center mt-4">
-  <h5 className="fw-bold">Follow Us</h5>
-  <div className="d-flex justify-content-center gap-4 mt-2">
-    <a href="https://wa.me/917502218281" target="_blank" rel="noopener noreferrer">
-      <i className="fab fa-whatsapp fa-lg me-1"></i> WhatsApp
-    </a>
-    <a href="https://www.instagram.com/creaticedesignpark/" target="_blank" rel="noopener noreferrer">
-      <i className="fab fa-instagram fa-lg me-1"></i> Instagram
-    </a>
-    <a href="mailto:dk255767@gmail.com" target="_blank" rel="noopener noreferrer">
-      <i className="fas fa-envelope fa-lg me-1"></i> Email
-    </a>
-  </div>
-</div>
-
+          <h5 className="fw-bold">Follow Us</h5>
+          <div className="d-flex justify-content-center gap-4 mt-2">
+            <a href="https://wa.me/917502218281" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-whatsapp fa-lg me-1"></i> WhatsApp
+            </a>
+            <a href="https://www.instagram.com/creaticedesignpark/" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-instagram fa-lg me-1"></i> Instagram
+            </a>
+            <a href="mailto:designparkinfo@gmail.com" target="_blank" rel="noopener noreferrer">
+              <i className="fas fa-envelope fa-lg me-1"></i> Email
+            </a>
+          </div>
+        </div>
       </div>
       <Footer />
     </>

@@ -7,6 +7,7 @@ import {
   FaPhone,
   FaMapMarkerAlt,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -18,14 +19,32 @@ const Footer = () => {
       <Container>
         <Row className="gy-5 text-center text-md-start">
           <Col md={3}>
-            <h4 className="fw-bold mb-3 text-gradient">Design-Park</h4>
+            <Link to="/" onClick={scrollToTop} className="fw-bold mb-3 text-gradient d-inline-block">
+              Design-Park
+            </Link>
             <p className="small">
               Crafting stunning visuals with the perfect blend of technology and creativity.
             </p>
             <div className="d-flex justify-content-center justify-content-md-start gap-3 mt-4">
-              <a href="https://www.instagram.com/creativedesignpark/" className="text-light fs-5"><FaInstagram /></a>
-              <a href="https://wa.me/917502218281" className="text-light fs-5"><FaWhatsapp /></a>
-              <a href="mailto:dk255767@gmail.com" className="text-light fs-5"><FaEnvelope /></a>
+              <a
+                href="https://www.instagram.com/creativedesignpark/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-light fs-5"
+              >
+                <FaInstagram />
+              </a>
+              <a
+                href="https://wa.me/917502218281"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-light fs-5"
+              >
+                <FaWhatsapp />
+              </a>
+              <a href="mailto:designparkinfo@gmail.com" className="text-light fs-5">
+                <FaEnvelope />
+              </a>
             </div>
           </Col>
 
@@ -39,18 +58,23 @@ const Footer = () => {
               <FaPhone className="me-2" style={{ transform: "rotate(90deg)" }} /> 7502218281
             </p>
             <p className="small mb-0 d-flex align-items-center">
-              <FaEnvelope className="me-2" /> dk255767@gmail.com
+              <FaEnvelope className="me-2" /> designparkinfo@gmail.com
             </p>
           </Col>
 
           <Col md={3}>
             <h5 className="text-uppercase mb-3 text-warning">Quick Links</h5>
             <ListGroup variant="flush">
-              {["products", "gallery", "aboutus", "contactus"].map(link => (
-                <ListGroup.Item key={link} className="bg-transparent border-0 px-0 py-1">
-                  <a href={`/${link}`} className="text-light small text-decoration-none">
-                    {link.charAt(0).toUpperCase() + link.slice(1)}
-                  </a>
+              {[
+                { label: "Poster", path: "/poster" },
+                { label: "Portfolio", path: "/portfolio" },
+                { label: "About Us", path: "/aboutus" },
+                { label: "Contact Us", path: "/contactus" },
+              ].map(({ label, path }) => (
+                <ListGroup.Item key={label} className="bg-transparent border-0 px-0 py-1">
+                  <Link to={path} onClick={scrollToTop} className="text-light small text-decoration-none">
+                    {label}
+                  </Link>
                 </ListGroup.Item>
               ))}
             </ListGroup>
@@ -59,14 +83,14 @@ const Footer = () => {
           <Col md={3}>
             <h5 className="text-uppercase mb-3 text-warning">Other Pages</h5>
             <ListGroup variant="flush">
-              {[ 
-                { label: "Terms & Conditions", link: "terms-and-conditions" },
-                { label: "Privacy Policy", link: "privacy-policy" }
+              {[
+                { label: "Terms & Conditions", link: "/terms-and-conditions" },
+                { label: "Privacy Policy", link: "/privacy-policy" }
               ].map(({ label, link }) => (
                 <ListGroup.Item key={link} className="bg-transparent border-0 px-0 py-1">
-                  <a href={`/${link}`} className="text-light small text-decoration-none">
+                  <Link to={link} onClick={scrollToTop} className="text-light small text-decoration-none">
                     {label}
-                  </a>
+                  </Link>
                 </ListGroup.Item>
               ))}
             </ListGroup>
@@ -96,25 +120,24 @@ const Footer = () => {
         }
 
         .whatsapp-button {
-          background-color: #25D366; /* WhatsApp Green */
+          background-color: #25D366;
           transition: background-color 0.3s ease;
         }
 
         .whatsapp-icon {
-          color: white; /* Icon color white */
+          color: white;
           font-size: 1.5rem;
           transition: color 0.3s ease;
         }
 
         .whatsapp-button:hover {
-          background-color: #128C7E; /* Darker green on hover */
+          background-color: #128C7E;
         }
 
         .whatsapp-button:hover .whatsapp-icon {
-          color: white; /* Keep icon white on hover */
+          color: white;
         }
 
-        /* Animation for smooth button appearance */
         .whatsapp-button {
           animation: scaleUp 0.3s ease-in-out;
         }

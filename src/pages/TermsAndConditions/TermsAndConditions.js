@@ -88,7 +88,7 @@ const TermsAndConditions = () => {
 
           <div>
             <h2 className="text-2xl font-semibold text-gray-700">16. Contact Us</h2>
-            <p className="text-base leading-relaxed">For any questions, please contact us at <strong className="text-gray-900">dk255767@gmail.com</strong>. We are here to help and support you.</p>
+            <p className="text-base leading-relaxed">For any questions, please contact us at <strong className="text-gray-900">designparkinfo@gmail.com</strong>. We are here to help and support you.</p>
           </div>
         </section>
       </div>

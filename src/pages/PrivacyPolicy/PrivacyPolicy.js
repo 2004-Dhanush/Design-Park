@@ -95,7 +95,7 @@ const PrivacyPolicy = () => {
         <p style={textStyle}>We may update this policy from time to time. Any changes will be posted on this page.</p>
 
         <h3 style={subHeadingStyle}>8. Contact Us</h3>
-        <p style={textStyle}><strong>Email:</strong> <a href="mailto:dk255767@gmail.com">dk255767@gmail.com</a></p>
+        <p style={textStyle}><strong>Email:</strong> <a href="mailto:designparkinfo@gmail.com">designparkinfo@gmail.com</a></p>
         <p style={textStyle}><strong>Phone:</strong> +91 7502218281</p>
       </div>
       <Footer />
