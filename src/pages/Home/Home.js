@@ -7,6 +7,8 @@ import ImageSlider2 from './ImageSwiper/ImageSwiper2';
 import Navbar from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import './Home.css';
+import Loader from '../../components/Loader';
+
 
 import AboutusImg from '../../assets/Images/Home/lo.png'
 
@@ -71,12 +73,11 @@ function Home() {
 
   return (
     <>
-      {loading ? (
-        <div className="loading-screen">
-          <Spinner animation="border" variant="primary" />
-          <p>Loading...</p>
-        </div>
-      ) : (
+      {
+      loading ? (
+  <Loader />
+) : (
+
         <>
           <Navbar />
           <Slideshow />
