@@ -10,7 +10,7 @@ import './Home.css';
 import Loader from '../../components/Loader';
 
 
-import AboutusImg from '../../assets/Images/Home/lo.png'
+import AboutusImg from '../../assets/Images/Home/newlogo.png'
 
 import birthdayImg from "../../assets/Images/Home/Services/poster.png";
 import occasionsImg from "../../assets/Images/Home/Services/logo.png";
